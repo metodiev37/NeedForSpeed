@@ -85,5 +85,13 @@ public abstract class Car
 
         return sb.ToString();
     }
+
+    public virtual void GetTuned(int tuneIndex, string addOn)
+    {
+        var hp = this.Horsepower + tuneIndex;
+
+        this.Horsepower = hp;
+        this.Suspension += tuneIndex / 2;
+    }
 }
 

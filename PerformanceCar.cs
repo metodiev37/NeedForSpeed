@@ -39,5 +39,11 @@ public class PerformanceCar : Car
         return sb.ToString();
     }
 
+    public override void GetTuned(int tuneIndex, string addOn)
+    {
+        base.GetTuned(tuneIndex, addOn);
+
+        this.AddOns.Add(addOn);
+    }
 }
 

@@ -25,5 +25,12 @@ public class ShowCar: Car
     {
         return base.ToString() + $"{this.Stars} *";
     }
+
+    public override void GetTuned(int tuneIndex, string addOn)
+    {
+        base.GetTuned(tuneIndex, addOn);
+
+        this.Stars += tuneIndex;
+    }
 }
 

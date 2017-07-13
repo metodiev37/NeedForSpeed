@@ -167,21 +167,7 @@ public class CarManager : Garage
     {
         foreach (var car in this.ParkedCars)
         {
-            var hp = car.Horsepower + tuneIndex;
-
-            car.Horsepower = hp;
-            car.Suspension += tuneIndex / 2;
-
-            if (car is PerformanceCar)
-            {
-                var perf = car as PerformanceCar;
-                perf.AddOns.Add(addOn);
-            }
-            else
-            {
-                var show = car as ShowCar;
-                show.Stars += tuneIndex;
-            }
+            car.GetTuned(tuneIndex, addOn);
         }
     }
 }
